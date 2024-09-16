@@ -23,6 +23,9 @@
         <label for="contact_number">Contact Number</label>
         <input type="tel" id="contact_number" class="input-field" placeholder="(123) 456-7890" required>
 
+        <label for="contact_number">Upload a 2x2 Photo</label>
+        <input type="file" id="userFile" class="input-field" required>
+
         <input type="submit" id="submit_button" class="submit-button" value="Submit">
     </form>
 </body>
@@ -56,10 +59,19 @@
         const userLast = document.getElementById('last_name').value;
         const userEmail = document.getElementById('email').value;
         const contactNumber = document.getElementById('contact_number').value;
+        const userFile = document.getElementById('userFile').files[0];
 
         try {
+
+            // let fileUrl = null; (File Upload is not viable yet)
             // Generate a new document in Firestore with a unique ID
             const docRef = doc(db, "submissions", userEmail); // Use userEmail or another unique field as the document ID
+
+            /*if (userFile) {
+                const storageRef = ref(storage, 'userFiles/' + userFile.name);
+                await uploadBytes(storageRef, userFile);
+                fileUrl = await getDownloadURL(storageRef);
+            } Commented this out because File upload is not available yet. */ 
 
             // Store user data in Firestore
             await setDoc(docRef, {
@@ -67,6 +79,7 @@
                 userLast: userLast,
                 userEmail: userEmail,
                 contactNumber: contactNumber,
+                // fileUrl: fileUrl,
             });
 
             console.log("Form submitted successfully:", userEmail);
