@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Submission</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="script.js" defer></script>
+</head>
+
+<body>
+    <form id="registerForm" class="form-container">
+        <label for="first_name">First Name</label>
+        <input type="text" id="first_name" class="input-field" placeholder="John" required>
+
+        <label for="last_name">Last Name</label>
+        <input type="text" id="last_name" class="input-field" placeholder="Doe" required>
+
+        <label for="email">Email Address</label>
+        <input type="email" id="email" class="input-field" placeholder="john.doe@example.com" required>
+
+        <label for="contact_number">Contact Number</label>
+        <input type="tel" id="contact_number" class="input-field" placeholder="(123) 456-7890" required>
+
+        <input type="submit" id="submit_button" class="submit-button" value="Submit">
+    </form>
+</body>
+
+<script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+    import { getFirestore, setDoc, doc, addDoc } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-analytics.js";
+
+    const firebaseConfig = {
+        apiKey: "AIzaSyC27V2d0DOfVG9CZgvEyqwNfAT0NHtpK60",
+        authDomain: "furdopt-d1f7b.firebaseapp.com",
+        projectId: "furdopt-d1f7b",
+        storageBucket: "furdopt-d1f7b.appspot.com",
+        messagingSenderId: "53446944629",
+        appId: "1:53446944629:web:be765ca3745b2c6ff3553c",
+        measurementId: "G-68ERH7FMP0"
+    };
+    document.getElementById("submit_button").addEventListener("click", function () {
+        console.log("User has submitted");
+    })
+
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+    const db = getFirestore(app);
+
+    document.getElementById("registerForm").addEventListener("submit", async (e) => {
+        e.preventDefault();
+
+        const userFirst = document.getElementById('first_name').value;
+        const userLast = document.getElementById('last_name').value;
+        const userEmail = document.getElementById('email').value;
+        const contactNumber = document.getElementById('contact_number').value;
+
+        try {
+            // Generate a new document in Firestore with a unique ID
+            const docRef = doc(db, "submissions", userEmail); // Use userEmail or another unique field as the document ID
+
+            // Store user data in Firestore
+            await setDoc(docRef, {
+                userFirst: userFirst,
+                userLast: userLast,
+                userEmail: userEmail,
+                contactNumber: contactNumber,
+            });
+
+            console.log("Form submitted successfully:", userEmail);
+            alert("Thank you for your submission!");
+
+            // Optionally redirect to another page
+            // window.location.assign("./index.html");
+
+        } catch (error) {
+            console.error("Error submitting form:", error);
+            alert("There was an error with your submission. Please try again.");
+        }
+    });
+
+</script>
+
+</html>
