@@ -1,0 +1,109 @@
+<!-- 
+ Authored by: Rona Mae S. Vasquez
+ Company: FurEver Homes Co.
+ Project: FurDopt
+ Feature: [FDT-001] Login Page
+ Description: The user is able to login to the website using fields for their username and password, with the option to select 
+ a "Remember Me" checkbox to save their credentials. If they forget their password, the user can click a "Forgot Password?" link 
+ for recovery. New users are able to register for an account through a provided option, the "Register Now". Additionally, the 
+ user can view the "Privacy Policy," and access an "About Us" button to learn more about the website.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- FONT -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+        <!-- CSS LINK -->
+        <link rel="stylesheet" href="Login page.css">
+
+        <title> FurDopt | Login </title>
+        <link rel="icon" href="https://i.ibb.co/4TgRvxp/Fur-Dopt-Logo-2.png" type="image/x-icon" />
+    </head>
+
+    <body>
+        <div class="container">
+            <!-- LEFT CONTAINER -->
+            <div class="left_container">
+                <div class="logo">
+                    <img src="https://i.ibb.co/sKCDx1K/Fur-Dopt-Logo.png" alt="Logo">
+                </div>
+                <h1>Login to Your Account</h1>
+                <p class="welcome">Welcome Back. You've been missed!</p>
+                <!-- LOGIN FORM -->
+                <form class="form">
+                    <input type="text" id="username" name="username" placeholder="Username">
+                    <input type="password" id="password" name="password" placeholder="Password">
+                    <!-- REMEMBER ME AND FORGOT PASSWORD LINE -->
+                    <div class="remember_forgot">
+                        <label>
+                            <input type="checkbox" name="remember">
+                            Remember Me
+                        </label>
+                        <a href="Forgot Password page.html" class="forgot_password">Forgot Password?</a>
+                    </div>
+                    <button type="submit" class="login_button" onclick="LoginChecker()"><strong>LOGIN</strong></button>
+                    
+                    <!-- ACCOUNT REGISTRATION LINK -->
+                    <p class="register">Don't have an account? <a href="Account Registration page.html">Register Now</a></p>
+                </form>
+            </div>
+
+            <!-- RIGHT CONTAINER -->
+            <div class="right_container">
+                <div class="image">
+                    <img src="https://i.ibb.co/C82KByw/Fur-Dopt-Login-Pic.png" alt="Background">
+                </div>
+                <a href="About Us page.html" class="about">About Us</a>
+            </div>
+        </div>
+        
+        <footer>
+            <a href="Privacy Policy page.html">Privacy Policy</a>
+            <p>Copyright 2024</p>
+        </footer>
+    
+    <!-- SCRIPTS -->
+        <script>
+           function LoginChecker() 
+           {
+                var inputs = document.querySelector('.form').getElementsByTagName('input');
+
+                // Check if any input is empty
+                var isEmpty = false;
+                for (var i = 0; i < inputs.length; i++) {
+                    if (inputs[i].value.trim() === '') {
+                        isEmpty = true;
+                        break;
+                    }
+                }
+
+                // Get password input
+                const password = document.getElementById('password').value;
+
+                // Password Checker
+                const passwordPattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()_+[\]{};':"\\|,.<>\/?]).{8,}$/;
+
+                // If fields are empty
+                if (isEmpty) {
+                    alert('Please input your username and password.');
+                    return; 
+                }
+
+                // If password input not valid
+                if (password && !passwordPattern.test(password)) {
+                    alert('Password must be at least 8 characters long and include uppercase letters, lowercase letters, numbers, and special characters.');
+                    return; 
+                }
+
+                // Redirect to homepage if everything's good
+                window.location.href = 'Homepage.html';
+            }
+        </script>
+
+    </body>
+</html>
