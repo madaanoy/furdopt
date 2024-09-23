@@ -18,9 +18,7 @@ html, body
 {
     height: 100%;
     width: 100%;
-    margin: 0;
-    padding: 0;
-    /**overflow: hidden;**/
+    overflow: hidden;
 }
 
 body 
@@ -44,12 +42,15 @@ body
 {
     width: 50vw; 
     height: 100vh;
+    justify-content: center;
 }
 
 /** LEFT CONTAINER **/
 .left_container 
 {
-    padding: 50px;
+    padding-top: 30px;
+    padding-left: 50px;
+    padding-right: 50px;
     background-color: #E5D3B3;
     display: flex;
     flex-direction: column;
@@ -58,9 +59,8 @@ body
 
 .logo img 
 {
-    margin-top: 10px;
     width: 90px;
-    margin-bottom: 40px;
+    margin-bottom: 6px;
 }
 
 h1 
@@ -68,7 +68,7 @@ h1
     font-size: 40px;
     color: #1e1e1e;
     text-align: center;
-    margin-bottom: 10px;
+    margin-bottom: 6px;
 }
 
 .welcome 
@@ -76,7 +76,6 @@ h1
     font-size: 26px;
     color: #1e1e1e;
     text-align: center;
-    margin-bottom: 54px;
 }
 
 /** FORM **/
@@ -89,7 +88,7 @@ h1
 
 input[type="text"], input[type="password"] 
 {
-    height: 58px;
+    height: 50px;
     padding: 16px;
     border: 2px solid #74665B;
     background-color: rgba(255, 255, 255, 0.4);
@@ -99,12 +98,12 @@ input[type="text"], input[type="password"]
 
 input[type="text"]
 {
-    margin-bottom: 14px;
+    margin-bottom: 10px;
 }
 
 input[type="password"]
 {
-    margin-bottom: 30px;
+    margin-bottom: 10px;
 }
 
 /** REMEMBER ME AND FORGOT PASSWORD LINE **/
@@ -114,7 +113,7 @@ input[type="password"]
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 70px;
+    margin-bottom: 40px;
     font-size: 14px;
 }
 
@@ -140,7 +139,7 @@ input[type="password"]
     color: #ffffff;    
     font-size: 24px;
     cursor: pointer;
-    margin-bottom: 10px;
+    margin-bottom: 4px;
 }
 
 .login_button:hover
@@ -176,8 +175,9 @@ input[type="password"]
     justify-content: space-between;
     align-items: center;
     font-size: 16px;
-    padding: 46px;
-    margin-top: 40px;
+    padding-top: 10px;
+    padding-left: 46px;
+    padding-right: 46px;
 }
 
 .bottom a 
@@ -197,17 +197,18 @@ input[type="password"]
     position: relative;
 }
 
-.image img 
-{
+.side-img{
+    background-image: url('https://i.ibb.co/Vxpx5j1/login-pic-4.png');
+    background-repeat: no-repeat;
+    background-size: cover;
     width: 100%;
     height: 100%;
-    object-fit: cover; 
 }
 
 .about 
 {
     position: absolute;
-    top: 57px;
+    top: 40px;
     right: 75px;
     color: #fff;
     text-decoration: none;
