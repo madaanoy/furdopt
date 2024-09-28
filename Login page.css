@@ -42,25 +42,26 @@ body
 {
     width: 50vw; 
     height: 100vh;
-    justify-content: center;
 }
 
 /** LEFT CONTAINER **/
 .left_container 
 {
-    padding-top: 30px;
-    padding-left: 50px;
-    padding-right: 50px;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 50px;
     background-color: #E5D3B3;
     display: flex;
     flex-direction: column;
-    justify-content: start;
+    justify-content: center; 
 }
 
 .logo img 
 {
+    margin-top: 20px;
     width: 90px;
-    margin-bottom: 6px;
+    margin-bottom: 40px;
 }
 
 h1 
@@ -68,7 +69,7 @@ h1
     font-size: 40px;
     color: #1e1e1e;
     text-align: center;
-    margin-bottom: 6px;
+    margin-bottom: 10px;
 }
 
 .welcome 
@@ -76,6 +77,7 @@ h1
     font-size: 26px;
     color: #1e1e1e;
     text-align: center;
+    margin-bottom: 54px;
 }
 
 /** FORM **/
@@ -88,7 +90,7 @@ h1
 
 input[type="text"], input[type="password"] 
 {
-    height: 50px;
+    height: 58px;
     padding: 16px;
     border: 2px solid #74665B;
     background-color: rgba(255, 255, 255, 0.4);
@@ -98,12 +100,12 @@ input[type="text"], input[type="password"]
 
 input[type="text"]
 {
-    margin-bottom: 10px;
+    margin-bottom: 14px;
 }
 
 input[type="password"]
 {
-    margin-bottom: 10px;
+    margin-bottom: 30px;
 }
 
 /** REMEMBER ME AND FORGOT PASSWORD LINE **/
@@ -113,7 +115,7 @@ input[type="password"]
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 40px;
+    margin-bottom: 70px;
     font-size: 14px;
 }
 
@@ -139,7 +141,7 @@ input[type="password"]
     color: #ffffff;    
     font-size: 24px;
     cursor: pointer;
-    margin-bottom: 4px;
+    margin-bottom: 10px;
 }
 
 .login_button:hover
@@ -175,9 +177,8 @@ input[type="password"]
     justify-content: space-between;
     align-items: center;
     font-size: 16px;
-    padding-top: 10px;
-    padding-left: 46px;
-    padding-right: 46px;
+    padding: 46px;
+    margin-top: 20px;
 }
 
 .bottom a 
