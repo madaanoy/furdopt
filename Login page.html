@@ -8,7 +8,7 @@
  a "Remember Me" checkbox to save their credentials. If they forget their password, the user can click a "Forgot Password?" link 
  for recovery. New users are able to register for an account through a provided option, the "Register Now". Additionally, the 
  user can view the "Privacy Policy," and access an "About Us" button to learn more about the website.
--->
+--> 
 
 <!DOCTYPE html>
 <html lang="en">
@@ -62,8 +62,10 @@
 
             <!-- RIGHT CONTAINER -->
             <div class="right_container">
-                <div class="side-img"></div>
-                <a href="About Us page.html" class="about">About Us</a>
+                <div class="right_container">
+                    <div class="side-img"></div>
+                    <a href="About Us page.html" class="about">About Us</a>
+                </div>
             </div>
         </div>
     </body>
@@ -100,12 +102,6 @@
             alert("Please enter a valid email address.");
             return;
         }
-        
-        //const passwordPattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{8,}$/;
-        //if (!passwordPattern.test(userPass)) {
-        //    alert("Password must be at least 8 characters long and include uppercase letters, lowercase letters, numbers, and special characters.");
-        //    return;
-        //}
 
         try {
             const userCredential = await signInWithEmailAndPassword(auth, userEmail, userPass);
@@ -120,5 +116,4 @@
         }
         });
     </script>
-    
 </html>
