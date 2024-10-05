@@ -1,0 +1,126 @@
+<!-- 
+ Authored by: Michael Angelo M. Daanoy
+ Back-end: Michael Angelo M. Daanoy
+ Company: FurEver Homes Co.
+ Project: FurDopt
+ Feature: [[FDT-30] Putting Up For Adoption Page
+ Description: he user is able to register a stray that they have found using the website.
+ They must only provide their personal information to have the stray be registered in the website.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>FurDopt | Register a Stray for Adoption</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="styles/adoption_2.css">
+</head>
+
+<body>
+    <header>
+        <div class="flex">
+            <img alt="Furdoft logo"
+                src="assets/logo.png"
+                width="50" height="50" />
+            <span>FURDOPT</span>
+        </div>
+        <nav>
+            <a href="#">ABOUT US</a>
+            <a href="#">FAQs</a>
+            <a href="#">CONTACT US</a>
+        </nav>
+        <div class="flex">
+            <i class="fas fa-user-circle"></i>
+            <span style="margin-left: 0.5rem;">Hi, Gojo</span>
+        </div>
+    </header>
+
+    <main>
+        <h1>Register a Stray for Adoption</h1>
+        <p>
+            Thank you for helping us find a loving home for a stray animal! Please fill out the form below with as much
+            detail as possible. This information will help us match the animal with a suitable adopter.
+        </p>
+        <form>
+            <section>
+                <h2>Contact Information</h2>
+                <div>
+                    <label for="name">Full Name</label>
+                    <input id="name" name="name" placeholder="Name" type="text" />
+                </div>
+                <div>
+                    <label for="phone">Phone</label>
+                    <input id="phone" name="phone" placeholder="Cellphone number" type="text" />
+                </div>
+                <div>
+                    <label for="email">Email</label>
+                    <input id="email" name="email" placeholder="Email address" type="email" />
+                </div>
+            </section>
+
+            <section>
+                <h2>Questionnaire</h2>
+                <div>
+                    <label for="animal-type">What type of animal is it? Dog? Cat? Or Other?</label>
+                    <input id="animal-type" name="animal-type" placeholder="Input your answer." type="text" />
+                </div>
+                <div>
+                    <label>What is the animal's gender?</label>
+                    <div class="flex">
+                        <label class="space-x-4"><input name="gender" type="radio" value="male" /> Male</label>
+                        <label class="space-x-4"><input name="gender" type="radio" value="female" /> Female</label>
+                        <label class="space-x-4"><input name="gender" type="radio" value="unknown" /> Unknown</label>
+                    </div>
+                </div>
+                <div>
+                    <label for="found-location">Where was the animal found?</label>
+                    <input id="found-location" name="found-location" placeholder="Input your answer." type="text" />
+                </div>
+                <div>
+                    <label for="medical-conditions">Does the animal have any known medical conditions or needs?</label>
+                    <input id="medical-conditions" name="medical-conditions" placeholder="Input your answer."
+                        type="text" />
+                </div>
+                <div>
+                    <label for="other-info">Any other information we should know?</label>
+                    <input id="other-info" name="other-info" placeholder="Input your answer." type="text" />
+                </div>
+                <div>
+                    <label for="animal-photo">Please upload clear photos of the animal</label>
+                    <input id="animal-photo" name="animal-photo" type="file" />
+                </div>
+            </section>
+
+            <section>
+                <h2>Consent</h2>
+                <div>
+                    <label><input name="consent" type="checkbox" /> I consent to the use of this information for the
+                        purpose of finding an adoptive home for the animal</label>
+                </div>
+                <div>
+                    <label><input name="contact" type="checkbox" /> I agree to be contacted if more information is
+                        needed.</label>
+                </div>
+            </section>
+            <div style="text-align: center;">
+                <button type="submit">SUBMIT</button>
+            </div>
+        </form>
+    </main>
+
+    <footer>
+        <div class="footer-links">
+            <a href="#">Privacy Policy</a>
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-tiktok"></i></a>
+        </div>
+        <p>Copyright 2024 FurEver Homes Co.</p>
+    </footer>
+</body>
+
+</html>
