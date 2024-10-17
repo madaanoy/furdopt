@@ -20,7 +20,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
         <!-- CSS LINK -->
-        <link rel="stylesheet" href="Login page.css">
+        <link rel="stylesheet" href="/styles/login.css">
 
         <title> FurDopt | Login </title>
         <link rel="icon" href="https://i.ibb.co/4TgRvxp/Fur-Dopt-Logo-2.png" type="image/x-icon" />
@@ -52,7 +52,7 @@
                     <button type="submit" id="submit_button" class="login_button"><strong>LOGIN</strong></button>
                     
                     <!-- ACCOUNT REGISTRATION LINK -->
-                    <p class="register">Don't have an account? <a href="Account Registration page.html">Register Now</a></p>
+                    <p class="register">Don't have an account? <a href="/public/registration.html">Register Now</a></p>
                 </form>
                 <div class="bottom">
                     <a href="Privacy Policy page.html">Privacy Policy</a>
@@ -107,8 +107,8 @@
             const userCredential = await signInWithEmailAndPassword(auth, userEmail, userPass);
             console.log("Login successful:", userCredential.user.email);
             alert("You have successfully logged in!");
-            // Optionally redirect to another page
-            // window.location.assign("./dashboard.html");
+            // Redirect to another page
+            window.location.assign("./home_page.html");
     
         } catch (error) {
             console.error("Error logging in:", error);
