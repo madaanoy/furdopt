@@ -1,133 +1,221 @@
-<!-- 
+/** 
  Authored by: Rona Mae S. Vasquez
- Back-end: Michael Daanoy
  Company: FurEver Homes Co.
  Project: FurDopt
- Feature: [FDT-002] Account Registration Page
- Description: The user is able to register by providing their email, username, and password. Before completing the registration,
- the user can review the website's privacy policy, which is clickable, they must agree with it by checking the checkbox in order
- to proceed. Additionally, the registration page includes an option for users who already have an existing account to log in.
--->
+ Feature: [FDT-001] Login Page
+ Description: The style sheet for the Login page.html
+**/
 
-<!DOCTYPE html>
-<html lang="en">
+* 
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Inter;
+}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- FONT -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
-        rel="stylesheet">
-    <!-- CSS LINK -->
-    <link rel="stylesheet" href="Account Registration page.css">
+html, body 
+{
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
 
-    <title> FurDopt | Account Registration </title>
-    <link rel="icon" href="https://i.ibb.co/4TgRvxp/Fur-Dopt-Logo-2.png" type="image/x-icon" />
-    <script type="module" src="script.js" defer></script>
-</head>
+body 
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background-color: #E5D3B3;
+}
 
-<body>
-    <div class="container">
-        <!-- LEFT CONTAINER -->
-        <div class="left_container">
-            <div class="side-img"></div>
-        </div>
+.container 
+{
+    display: flex;
+    width: 100vw;
+    height: 100vh; 
+}
 
-        <!-- RIGHT CONTAINER -->
-        <div class="right_container">
-            <P class="join">JOIN US FOR FREE</P>
-            <h1>Create Your Account</h1>
-            <p class="started">Get Started on Your Pet Adoption Journey</p>
+.left_container, .right_container 
+{
+    width: 50vw; 
+    height: 100vh;
+}
 
-            <!-- LOGIN FORM -->
-            <form id="registerForm" class="form-container">
-                <input type="text" id="email_address" name="email_address" placeholder="Email address" required>
-                <input type="text" id="user_name" name="user_name" placeholder="Username" required>
-                <input type="password" id="user_password" name="user_password" placeholder="Password" required>
-                <!-- REMEMBER ME AND FORGOT PASSWORD LINE -->
-                <div class="agree">
-                    <label>
-                        <input type="checkbox" name="remember" id="privacyPolicy" required>
-                        I agree to the <a href="Privacy Policy page.html">Privacy Policy</a>
-                    </label>
-                </div>
-                <div id="checkboxError" style="color: red;"></div>
-                <button type="submit" id="submit_button" class="register_button"><strong>REGISTER</strong></button>
+/** LEFT CONTAINER **/
+.left_container 
+{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 50px;
+    background-color: #E5D3B3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+}
 
-                <!-- ACCOUNT REGISTRATION LINK -->
-                <p class="login">Already have an account? <a href="Login page.html">Log In</a></p>
-            </form>
-        </div>
-    </div>
-</body>
+.logo img 
+{
+    margin-top: 20px;
+    width: 90px;
+    margin-bottom: 40px;
+}
 
-<!-- SCRIPTS -->
-<script type="module">
-    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
-    import { getFirestore, setDoc, doc, addDoc } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
-    import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-analytics.js";
-    import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
+h1 
+{
+    font-size: 40px;
+    color: #1e1e1e;
+    text-align: center;
+    margin-bottom: 10px;
+}
 
-    const firebaseConfig = {
-        apiKey: "AIzaSyC27V2d0DOfVG9CZgvEyqwNfAT0NHtpK60",
-        authDomain: "furdopt-d1f7b.firebaseapp.com",
-        projectId: "furdopt-d1f7b",
-        storageBucket: "furdopt-d1f7b.appspot.com",
-        messagingSenderId: "53446944629",
-        appId: "1:53446944629:web:be765ca3745b2c6ff3553c",
-        measurementId: "G-68ERH7FMP0"
-    };
-    document.getElementById("submit_button").addEventListener("click", function () {
-        console.log("User has registered");
-    })
+.welcome 
+{
+    font-size: 26px;
+    color: #1e1e1e;
+    text-align: center;
+    margin-bottom: 54px;
+}
 
-    const checkbox = document.getElementById("privacyPolicy");
-    const submitButton = document.getElementById("submit_button");
-    const errorDiv = document.getElementById("checkboxError");
+/** FORM **/
+.form-container
+{
+    display: flex;
+    flex-direction: column;
+    padding: 46px;
+}
 
-    submitButton.addEventListener("click", function (event) {
-        if (!checkbox.checked) {
-            event.preventDefault(); // Prevent form submission
-            errorDiv.innerText = "You must agree to the Privacy Policy.";
-        } else {
-            errorDiv.innerText = ""; // Clear any previous error message
-            console.log("User has registered");
-        }
-    });
+input[type="text"], input[type="password"] 
+{
+    height: 58px;
+    padding: 16px;
+    border: 2px solid #74665B;
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 14px;
+    font-size: 16px;
+}
 
-    const app = initializeApp(firebaseConfig);
-    const analytics = getAnalytics(app);
-    const db = getFirestore(app);
-    const auth = getAuth();
+input[type="text"]
+{
+    margin-bottom: 14px;
+}
 
-    document.getElementById("registerForm").addEventListener("submit", async (e) => {
-        e.preventDefault();
+input[type="password"]
+{
+    margin-bottom: 30px;
+}
 
-        const userEmail = document.getElementById('email_address').value;
-        const userName = document.getElementById('user_name').value;
-        const userPass = document.getElementById('user_password').value;
+/** REMEMBER ME AND FORGOT PASSWORD LINE **/
+.remember_forgot 
+{
+    color: rgba(30, 30, 30, 0.7);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 70px;
+    font-size: 14px;
+}
 
-        try {
-            const docRef = doc(db, "accounts", userName);
-            const userCredential = await createUserWithEmailAndPassword(auth, userEmail, userPass);
+.remember_forgot a
+{
+    color: rgba(30, 30, 30, 0.7);
+    text-decoration: none;
+}
 
-            await setDoc(docRef, {
-                userEmail: userEmail,
-                userName: userName,
-                userPass: userPass,
-            });
+.remember_forgot a:hover
+{
+    font-weight: 500;
+}
 
-            console.log("Form submitted successfully:", userEmail);
-            alert("You have successfully registered!");
+/** LOGIN AND REGISTER **/
+.login_button 
+{
+    height: 58px;
+    padding: 12px;
+    border: 2px solid #74665B;
+    background-color: rgba(116, 102, 91, 0.7);
+    border-radius: 14px;
+    color: #ffffff;    
+    font-size: 24px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
 
-        } catch (error) {
-            console.error("Error submitting form:", error);
-            alert("There was an error with your submission: " + error.message);
-        }
-    });
-</script>
+.login_button:hover
+{
+    font-weight: 550;
+}
 
-</html>
+.register 
+{
+    margin-top: 10px;
+    font-size: 16px;
+    text-align: center;
+    color: rgba(30, 30, 30, 0.7);
+}
+
+.register a 
+{
+    color: #1e1e1e;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.register a:hover 
+{
+    text-decoration: underline;
+}
+
+/** BOTTOM PART **/
+.bottom
+{
+    color: rgba(30, 30, 30, 0.7);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+    padding: 46px;
+    margin-top: 20px;
+}
+
+.bottom a 
+{
+    color: rgba(30, 30, 30, 0.7);
+    text-decoration: none;
+}
+
+.bottom a:hover 
+{
+    font-weight: 500;
+}
+
+/** RIGHT CONTAINER **/
+.right_container 
+{
+    position: relative;
+}
+
+.side-img{
+    background-image: url('https://i.ibb.co/Vxpx5j1/login-pic-4.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.about 
+{
+    position: absolute;
+    top: 40px;
+    right: 75px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.about:hover
+{
+    font-weight: 500;
+}
