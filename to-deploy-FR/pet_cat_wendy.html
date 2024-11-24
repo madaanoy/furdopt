@@ -1,0 +1,104 @@
+<!-- 
+ Authored by: Rona Mae S. Vasquez
+ Company: FurEver Homes Co.
+ Project: FurDopt
+ Feature: [FDT-005] Pet Profile Page - Wendy
+ Description: The user can see their selected pet full details. They also have the option to adopt their selected pet.
+ They can also go back to the page they have been into.
+--> 
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- FONT -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+        <!-- CSS LINK -->
+        <link rel="stylesheet" href="pet_cat_wendy.css">
+
+        <title> FurDopt | Pet Profile - Wendy </title>
+        <link rel="icon" href="https://i.ibb.co/4TgRvxp/Fur-Dopt-Logo-2.png" type="image/x-icon" />
+        <script type="module" src="script.js" defer></script>
+    </head>
+
+    <body>
+        <header>
+            <div class="navlogo">
+                <a href="home_page.html"><img src="https://i.ibb.co/WPjhG6S/logo2.png" alt="logo2"></a>
+            </div>
+    
+            <nav>
+                <ul class="nav_links">
+                    <li><a href="#">ABOUT US</a></li>
+                    <li><a href="#">FAQs</a></li>
+                    <li><a href="contact_us_page.html">CONTACT US</a></li>
+                    <li><a href="#"><span class="iconoir--profile-circle"></span> Hi, Gojo</a></li>
+                    <li><a href="login.html" class="logout"><span class="material-symbols--logout"></span>LOGOUT</a></li>
+                </ul>
+            </nav>
+        </header>
+        <br>
+
+        <div class="back-button">
+            <button id="back">
+                <img src="arrow_back.svg" alt="arrow_back">
+            </button>
+        </div>
+
+        <div class="content">
+            <img src="6cat2.png" class="pet-image">
+            <div class="description">
+                <h2> Wendy </h2>
+                <p> Age: 1 </p>
+                <p> Gender: Female </p>
+                <p> Description here. Description here. Description here. Description here. Description here. Description here. 
+                    Description here. Description here. Description here. Description here. Description here. Description here. 
+                    Description here. Description here. Description here. Description here. Description here. 
+                </p>
+                <p>
+                    Encouraging description here. Encouraging description here. Encouraging description here.
+                    Encouraging description here. Encouraging description here.
+                </p>
+            </div>
+        </div>
+
+        <div class="the-button">
+            <a href="#">
+                <button class="button"> ADOPT ME NOW </button>
+            </a>
+        </div>
+        
+        <div class="copyright">
+            <img src="https://i.ibb.co/HzM1Scb/Slice-1.png" alt="Slice-1">
+            <div class="overlay-text">
+                <div class="left3">
+                    <h2>
+                        <a href="policy_page.html">Privacy Policy</a>
+                    </h2>
+                </div>
+                <div class="right3">
+                    <h2>
+                        Copyright 2024 © FurEver Homes Co.
+                    </h2>
+                    <div class="social">
+                        <a href="#"><span class="mdi--instagram"></span></a>
+                        <a href="#"><span class="ic--baseline-facebook"></span></a>
+                        <a href="#"><span class="prime--twitter"></span></a>
+                        <a href="#"><span class="ri--linkedin-fill"></span></a>
+                        <a href="#"><span class="ic--baseline-tiktok"></span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+
+    <!-- SCRIPTS -->
+    <script>
+        document.getElementById('back').addEventListener('click', function() {
+        window.history.back(); // Go back in history
+    });
+    </script>
+</html>

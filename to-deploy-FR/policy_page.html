@@ -1,0 +1,49 @@
+<!-- 
+ Authored by: Rona Mae S. Vasquez
+ Company: FurEver Homes Co.
+ Project: FurDopt
+ Feature: [FDT-013] Privacy Policy Page
+ Description: The user can see and read the website’s Privacy Policy, and are able to go back from the previous 
+ page they went to by using the back arrow in this page
+--> 
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- FONT -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+        <!-- CSS LINK -->
+        <link rel="stylesheet" href="policy_page.css">
+
+        <title> FurDopt | Privacy Policy </title>
+        <link rel="icon" href="https://i.ibb.co/4TgRvxp/Fur-Dopt-Logo-2.png" type="image/x-icon" />
+        <script type="module" src="script.js" defer></script>
+    </head>
+
+    <body>
+        <div class ="header">
+            <img src="https://i.ibb.co/Ntz94LS/FDT-logo-and-name.png" alt="Furdopt header">
+        </div>
+
+        <div class="title">
+            <button id="back">
+                <img src="arrow_back.svg" alt="arrow_back">
+            </button>
+            <h1> Privacy Policy </h1>
+        </div>
+        <hr>
+
+        <p> Contents here </p>
+    </body>
+
+    <!-- SCRIPTS -->
+    <script>
+        document.getElementById('back').addEventListener('click', function() {
+        window.history.back(); // Go back in history
+    });
+    </script>
+</html>

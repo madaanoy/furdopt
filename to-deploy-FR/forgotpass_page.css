@@ -1,0 +1,125 @@
+/** 
+ Authored by: Rona Mae S. Vasquez
+ Company: FurEver Homes Co.
+ Project: FurDopt
+ Feature: [FDT-012] Forgot Password Page
+ Description: The style sheet for the forgotpass_page.html
+**/
+
+body
+{
+    background-color:#FFFAF0;
+    font-family: Inter;
+}
+
+/** HEADER **/
+.header
+{
+    padding-left: 1%;
+    justify-content: flex-start; 
+    margin-bottom: 4%;
+}
+
+.header img
+{
+    max-width: 100%; 
+    height: auto;
+    max-height: 100px; 
+}
+
+/** CONTAINER **/
+.container 
+{
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    flex-wrap: wrap;
+    padding: 2%;
+}
+
+/** SIDE IMAGE **/
+.side-img 
+{
+    display: flex; 
+    justify-content: flex-start; 
+    padding-right: 6%; 
+}
+
+.side-img img 
+{
+    max-width: 100%;
+    height: auto;
+    max-height: 400px; 
+}
+
+.title
+{
+    margin-bottom: 8%;
+}
+
+/** EMAIL FORM **/
+.input-field 
+{
+    position: relative; 
+    width: 100%; 
+    margin-bottom: 8%;
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+.input-field input 
+{
+    padding-left: 46px; 
+    height: 50px; 
+    border: 2px solid #74655B; 
+    border-radius: 10px; 
+    width: 100%; 
+    box-sizing: border-box; 
+    /* for icon */
+    background: url('/images/mail.svg') no-repeat 10px center; 
+    background-size: 26px 26px; 
+}
+
+.input-field input::placeholder 
+{
+    color: #74665B; 
+}
+
+/** BUTTONS **/
+.submit-button
+{
+    height: 50px;
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #74665B;
+    background-color: rgba(116, 102, 91, 0.7);
+    border-radius: 10px;
+    color: #ffffff;    
+    font-size: 18px;
+    cursor: pointer;
+    margin-bottom: 8%;
+}
+
+.back 
+{
+    display: flex; 
+    justify-content: center;
+    align-items: center; 
+}
+
+.back img 
+{
+    margin-right: 8px; 
+    width: 20px;
+    height: auto; 
+}
+
+.back a 
+{
+    text-decoration: none; 
+    color: rgba(30, 30, 30, 0.6);
+}
+
+.back a:hover
+{
+    font-weight: 550;
+}

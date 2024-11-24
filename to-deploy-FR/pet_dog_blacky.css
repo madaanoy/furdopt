@@ -1,0 +1,355 @@
+/** 
+ Authored by: Rona Mae S. Vasquez
+ Company: FurEver Homes Co.
+ Project: FurDopt
+ Feature: [FDT-005] Pet Profile Page - Blacky
+ Description: The style sheet for the pet_dog_blacky.html
+**/
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body
+{
+    background-color:#FFFAF0;
+    font-family: Inter;
+}
+
+/** HEADER NAVIGATION BAR **/
+header
+{
+    background-color: #E5D3B3;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 16px;
+    position: fixed;
+    width: 100%;
+    box-shadow: 0px 0px 8px 0px rgba(25, 25, 25, 0.80); 
+    z-index: 1;
+}
+
+.navlogo img
+{
+    height: 76px;
+    width: auto;
+}
+
+.nav_links li a
+{
+    font-weight: 600;
+    color: #1E1E1E;
+    font-size: 22;
+    text-decoration: none;
+}
+
+.nav_links li 
+{
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+.nav_links li:hover
+{
+    text-decoration: underline;
+}
+
+.iconoir--profile-circle 
+{
+    display: inline-block;
+    width: 30px;
+    height: 36px;
+    --svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cg fill='none' stroke='%23000' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5'%3E%3Cpath d='M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10s10-4.477 10-10S17.523 2 12 2'/%3E%3Cpath d='M4.271 18.346S6.5 15.5 12 15.5s7.73 2.846 7.73 2.846M12 12a3 3 0 1 0 0-6a3 3 0 0 0 0 6'/%3E%3C/g%3E%3C/svg%3E");
+    background-color: currentColor;
+    -webkit-mask-image: var(--svg);
+    mask-image: var(--svg);
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%;
+}
+
+.iconoir--profile-circle
+{
+    vertical-align: -11px;
+    margin-right: 5px;
+}
+
+.material-symbols--logout 
+{
+    display: inline-block;
+    width: 24px;
+    height: 34px;
+    --svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23000' d='M5 21q-.825 0-1.412-.587T3 19V5q0-.825.588-1.412T5 3h7v2H5v14h7v2zm11-4l-1.375-1.45l2.55-2.55H9v-2h8.175l-2.55-2.55L16 7l5 5z'/%3E%3C/svg%3E");
+    background-color: currentColor;
+    -webkit-mask-image: var(--svg);
+    mask-image: var(--svg);
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%;
+}
+
+.material-symbols--logout
+{
+    vertical-align: -11px;
+    margin-right: 5px;
+    font-weight: bold;
+}
+
+.logout 
+{
+    background-color: #74655B;
+    padding: 10px 12px;
+    border-radius: 10px;
+    color: #ffffff !important;
+    text-decoration: none;
+    align-items: center;
+}
+
+.logout:hover
+{
+    background-color: #544943;
+}
+
+.logout:active
+{
+    background-color: #544943;
+    box-shadow: 0 4px #74655B;
+    transform: translateY(10px);
+}
+
+/** BACK BUTTON **/
+#back 
+{
+    background:none; 
+    border: none; 
+    cursor: pointer; 
+    margin-top: 120px;
+    margin-left: 66px; 
+    padding: 8px;
+}
+
+#back img
+{
+    width: 28px;
+    height: auto; 
+}
+
+/** CONTENT **/
+.content
+{   
+    margin: 30px 80px 40px 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.pet-image
+{
+    max-width: 70%;
+    height: auto;
+    max-height: 250px; 
+    margin-right: 28px;
+    background-color: #74655B;
+    padding: 4px;
+    border-radius: 14px;
+}
+
+.description
+{
+    flex: 1;
+    margin: 0 8px;
+}
+
+.description h2
+{
+    margin-bottom: 16px;
+}
+
+.description p
+{
+    margin-bottom: 12px;
+}
+
+/** BUTTON **/
+.the-button 
+{
+    display: flex;
+    margin-top: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.button
+{
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 150px;
+    border-radius: 8px;
+    text-decoration: none;
+    border: 2.6px solid #74655B;
+    background-color: rgba(116, 102, 91, 0.4);
+    padding: 2px;
+    cursor: pointer;
+}
+
+.button:hover
+{
+    font-weight: 600;
+}
+
+/** COPYRIGHTS FOOTER **/
+.copyright
+{
+    margin-top: 100px;
+    background-color: #74665B;
+    width: 100%;
+    position: relative;
+    display: inline-block;
+    color: white;
+}
+
+.copyright img
+{
+    height: auto;
+    width: auto;
+    max-width: 1300px;
+}
+
+.overlay-text h2
+{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.left3
+{
+    position: absolute;
+    top: 35%; 
+    left: 5%;
+    padding: 10px 20px; 
+    text-align: center;
+}
+
+.left3 h2 a
+{
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.left3 h2 a:hover
+{
+    font-weight: 800;
+}
+
+.right3
+{
+    position: absolute;
+    top: 35%;
+    right: 5%; 
+    padding: 10px 20px; 
+    text-align: center;
+}
+
+.right3 h2
+{
+    margin-bottom: 30px;
+}
+
+.social
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0px 30px;
+}
+
+.social a
+{
+    color: white;
+    margin-right: 15px;
+}
+
+.mdi--instagram 
+{
+    display: inline-block;
+    width: 30px;
+    height: 36px;
+    --svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23000' d='M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4zm9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8A1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5a5 5 0 0 1-5 5a5 5 0 0 1-5-5a5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3a3 3 0 0 0 3 3a3 3 0 0 0 3-3a3 3 0 0 0-3-3'/%3E%3C/svg%3E");
+    background-color: currentColor;
+    -webkit-mask-image: var(--svg);
+    mask-image: var(--svg);
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%;
+}
+
+.ic--baseline-facebook 
+{
+    display: inline-block;
+    width: 30px;
+    height: 36px;
+    --svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23000' d='M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95'/%3E%3C/svg%3E");
+    background-color: currentColor;
+    -webkit-mask-image: var(--svg);
+    mask-image: var(--svg);
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%;
+}
+
+.prime--twitter 
+{
+    display: inline-block;
+    width: 30px;
+    height: 36px;
+    --svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 14'%3E%3Cg fill='none'%3E%3Cg clip-path='url(%23primeTwitter0)'%3E%3Cpath fill='%23000' d='M11.025.656h2.147L8.482 6.03L14 13.344H9.68L6.294 8.909l-3.87 4.435H.275l5.016-5.75L0 .657h4.43L7.486 4.71zm-.755 11.4h1.19L3.78 1.877H2.504z'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='primeTwitter0'%3E%3Cpath fill='%23fff' d='M0 0h14v14H0z'/%3E%3C/clipPath%3E%3C/defs%3E%3C/g%3E%3C/svg%3E");
+    background-color: currentColor;
+    -webkit-mask-image: var(--svg);
+    mask-image: var(--svg);
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%;
+}
+
+.ri--linkedin-fill 
+{
+    display: inline-block;
+    width: 30px;
+    height: 36px;
+    --svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23000' d='M6.94 5a2 2 0 1 1-4-.002a2 2 0 0 1 4 .002M7 8.48H3V21h4zm6.32 0H9.34V21h3.94v-6.57c0-3.66 4.77-4 4.77 0V21H22v-7.93c0-6.17-7.06-5.94-8.72-2.91z'/%3E%3C/svg%3E");
+    background-color: currentColor;
+    -webkit-mask-image: var(--svg);
+    mask-image: var(--svg);
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%;
+}
+
+.ic--baseline-tiktok 
+{
+    display: inline-block;
+    width: 30px;
+    height: 36px;
+    --svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23000' d='M16.6 5.82s.51.5 0 0A4.28 4.28 0 0 1 15.54 3h-3.09v12.4a2.59 2.59 0 0 1-2.59 2.5c-1.42 0-2.6-1.16-2.6-2.6c0-1.72 1.66-3.01 3.37-2.48V9.66c-3.45-.46-6.47 2.22-6.47 5.64c0 3.33 2.76 5.7 5.69 5.7c3.14 0 5.69-2.55 5.69-5.7V9.01a7.35 7.35 0 0 0 4.3 1.38V7.3s-1.88.09-3.24-1.48'/%3E%3C/svg%3E");
+    background-color: currentColor;
+    -webkit-mask-image: var(--svg);
+    mask-image: var(--svg);
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%;
+}
