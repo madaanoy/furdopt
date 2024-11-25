@@ -1,0 +1,181 @@
+<!-- 
+ Authored by: Rona Mae S. Vasquez
+ Company: FurEver Homes Co.
+ Project: FurDopt
+ Feature: [FDT-004] All Animals Page
+ Description: The user can see all adoptable animals by category. They also have the option whether to see more information
+ of a specific pet.
+--> 
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- FONT -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+        <!-- CSS LINK -->
+        <link rel="stylesheet" href="all_animals_page.css">
+
+        <title> FurDopt | All Animals </title>
+        <link rel="icon" href="https://i.ibb.co/4TgRvxp/Fur-Dopt-Logo-2.png" type="image/x-icon" />
+        <script type="module" src="script.js" defer></script>
+    </head>
+
+    <body>
+        <header>
+            <div class="navlogo">
+                <a href="home_page.html"><img src="https://i.ibb.co/WPjhG6S/logo2.png" alt="logo2"></a>
+            </div>
+    
+            <nav>
+                <ul class="nav_links">
+                    <li><a href="#">ABOUT US</a></li>
+                    <li><a href="#">FAQs</a></li>
+                    <li><a href="contact_us_page.html">CONTACT US</a></li>
+                    <li><a href="#"><span class="iconoir--profile-circle"></span> Hi, Gojo</a></li>
+                    <li><a href="index.html" class="logout"><span class="material-symbols--logout"></span>LOGOUT</a></li>
+                </ul>
+            </nav>
+        </header>
+        <br>
+
+        <div class="title">
+            <h2> Find your Perfect Companion! </h2> 
+            <p> Explore our categories to discover the loving animals waiting for their forever homes. </p>
+            <p> Below are animals who could be considered for adoption: </p>
+        </div>
+
+        <div class="categories">
+            <ul class="controls">
+                <li class="buttons active" data-filter="all">ALL</li>
+                <li class="buttons" data-filter="dogs">DOGS</li>
+                <li class="buttons" data-filter="cats">CATS</li>
+                <li class="buttons" data-filter="hamsters">HAMSTERS</li>
+            </ul>
+        </div>
+
+        <div class="containers">
+            <div class="item dogs"> 
+                <img src="1dog1.png">
+                <h3> Alice </h3>
+                <p> Gender: Female</p>
+                <p> Age: 2 </p>
+                <a href="pet_dog_alice.html">
+                    <button class="see-button" style="vertical-align:middle"><span><strong>MORE ABOUT ME</strong></span></button>
+                </a>
+            </div>
+            <div class="item dogs">
+                <img src="2dog2.png">
+                <h3> Hapi </h3>
+                <p> Gender: Male</p>
+                <p> Age: 2 </p>
+                <a href="pet_dog_hapi.html">
+                    <button class="see-button" style="vertical-align:middle"><span><strong>MORE ABOUT ME</strong></span></button>
+                </a>
+            </div>
+            <div class="item dogs">
+                <img src="3dog3.png">
+                <h3> Blacky </h3>
+                <p> Gender: Male</p>
+                <p> Age: 3 </p>
+                <a href="pet_dog_blacky.html">
+                    <button class="see-button" style="vertical-align:middle"><span><strong>MORE ABOUT ME</strong></span></button>
+                </a>
+            </div>
+            <div class="item dogs">
+                <img src="4dog4.png">
+                <h3> Ellie </h3>
+                <p> Gender: Male</p>
+                <p> Age: 2 </p>
+                <a href="pet_dog_ellie.html">
+                    <button class="see-button" style="vertical-align:middle"><span><strong>MORE ABOUT ME</strong></span></button>
+                </a>
+            </div>
+            <div class="item cats">
+                <img src="5cat1.png">
+                <h3> Beluga </h3>
+                <p> Gender: Male</p>
+                <p> Age: 2 </p>
+                <a href="pet_cat_beluga.html">
+                    <button class="see-button" style="vertical-align:middle"><span><strong>MORE ABOUT ME</strong></span></button>
+                </a>
+            </div>
+            <div class="item cats">
+                <img src="6cat2.png">
+                <h3> Wendy </h3>
+                <p> Gender: Female</p>
+                <p> Age: 1 </p>
+                <a href="pet_cat_wendy.html">
+                    <button class="see-button" style="vertical-align:middle"><span><strong>MORE ABOUT ME</strong></span></button>
+                </a>
+            </div>
+            <div class="item cats">
+                <img src="7cat3.png">
+                <h3> Cathy </h3>
+                <p> Gender: Female</p>
+                <p> Age: 2 </p>
+                <a href="pet_cat_cathy.html">
+                    <button class="see-button" style="vertical-align:middle"><span><strong>MORE ABOUT ME</strong></span></button>
+                </a>
+            </div>
+            <div class="item hamsters">
+                <p> Sorry! There's nothing here.</p>
+            </div>
+        </div>
+
+        <div class="copyright">
+            <img src="https://i.ibb.co/HzM1Scb/Slice-1.png" alt="Slice-1">
+            <div class="overlay-text">
+                <div class="left3">
+                    <h2>
+                        <a href="policy_page.html">Privacy Policy</a>
+                    </h2>
+                </div>
+                <div class="right3">
+                    <h2>
+                        Copyright 2024 © FurEver Homes Co.
+                    </h2>
+                    <div class="social">
+                        <a href="#"><span class="mdi--instagram"></span></a>
+                        <a href="#"><span class="ic--baseline-facebook"></span></a>
+                        <a href="#"><span class="prime--twitter"></span></a>
+                        <a href="#"><span class="ri--linkedin-fill"></span></a>
+                        <a href="#"><span class="ic--baseline-tiktok"></span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+
+    <!-- SCRIPTS -->
+    <!-- jquery cdn link  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script>
+    $(document).ready(function(){
+        // Hide initially
+        $('.hamsters').hide();
+
+        $('.buttons').click(function(){
+            $(this).addClass('active').siblings().removeClass('active');
+
+            var filter = $(this).attr('data-filter')
+
+            if(filter == 'all')
+            {
+                /* $('.item').show(400); */
+                $('.item').not('.hamsters').show(400);
+                $('.hamsters').hide(300);
+            }
+            else
+            {
+                $('.item').not('.'+filter).hide(300);
+                $('.item').filter('.'+filter).show(500);
+            }
+        });
+    });
+    </script>
+</html>

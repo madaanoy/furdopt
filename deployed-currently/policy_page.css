@@ -1,0 +1,68 @@
+/** 
+ Authored by: Rona Mae S. Vasquez
+ Company: FurEver Homes Co.
+ Project: FurDopt
+ Feature: [FDT-013] Privacy Policy Page
+ Description: The style sheet for the policy_page.html
+**/
+
+body
+{
+    background-color:#FFFAF0;
+    font-family: Inter;
+}
+
+/** HEADER **/
+.header
+{
+    padding-left: 1%;
+    justify-content: flex-start; 
+    margin-bottom: 2%;
+}
+
+.header img
+{
+    max-width: 100%; 
+    height: auto;
+    max-height: 100px; 
+}
+
+/** TITLE **/
+.title
+{
+    display: flex;
+    align-items: center;
+}
+
+.title h1
+{
+    padding-left: 20px;
+}
+
+#back 
+{
+    background:none; 
+    border: none; 
+    cursor: pointer; 
+    margin-left: 40px; 
+    padding: 8px;
+}
+
+#back img
+{
+    width: 28px;
+    height: auto; 
+}
+
+hr
+{
+    height: 2px;
+    background-color: #1e1e1e;
+    margin: 0px 30px 200px 30px;
+}
+
+/** CONTENT **/
+p
+{
+    text-align: center;
+}

@@ -1,0 +1,91 @@
+<!-- 
+ Authored by: Rona Mae S. Vasquez
+ Company: FurEver Homes Co.
+ Project: FurDopt
+ Feature: [FDT-012] Forgot Password Page
+ Description: The user can reset their password if they forget it by clicking the link sent to their email after submitting 
+ their email on this page.
+--> 
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- FONT -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+        <!-- CSS LINK -->
+        <link rel="stylesheet" href="forgotpass_page.css">
+
+        <title> FurDopt | Forgot Password </title>
+        <link rel="icon" href="https://i.ibb.co/4TgRvxp/Fur-Dopt-Logo-2.png" type="image/x-icon" />
+        <script type="module" src="script.js" defer></script>
+    </head>
+
+    <body>
+        <div class ="header">
+            <img src="https://i.ibb.co/Ntz94LS/FDT-logo-and-name.png" alt="Furdopt header">
+        </div>
+
+        <div class="container">
+            <div class="side-img">
+                <img src="https://i.ibb.co/60ck4F8/FDT-forgot-pass.png">
+            </div>
+    
+            <div class="content">
+                <div class="title">
+                    <h1>Forgot Password</h1>
+                    <p>Enter your email and we’ll send you a link to reset your password.</p>
+                </div>
+            
+                <div class="input-field">
+                    <input type="email" id="email-address" name="email-address" placeholder="Email address" required>
+                </div>                
+            
+                <button type="submit" id="submit-button" class="submit-button"><strong>SUBMIT</strong></button>
+            
+                <div class="back">
+                    <a href="login.html">
+                        <img src="https://i.ibb.co/qm5ctHg/Chevron-left.png" alt="Back icon">
+                    </a>
+                    <a href="login.html">Back to Login</a>
+                </div>
+            </div>            
+        </div>
+    </body>
+
+    <!-- SCRIPTS -->
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+        import { getFirestore, setDoc, doc, addDoc } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-analytics.js";
+        import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyC27V2d0DOfVG9CZgvEyqwNfAT0NHtpK60",
+            authDomain: "furdopt-d1f7b.firebaseapp.com",
+            projectId: "furdopt-d1f7b",
+            storageBucket: "furdopt-d1f7b.appspot.com",
+            messagingSenderId: "53446944629",
+            appId: "1:53446944629:web:be765ca3745b2c6ff3553c",
+            measurementId: "G-68ERH7FMP0"
+        };
+    
+        document.getElementById("submit-button").addEventListener("click", async (e) => {e.preventDefault();
+    
+        const userEmail = document.getElementById('email-address').value;
+    
+        console.log("Email:", userEmail);
+    
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailPattern.test(userEmail)) 
+        {
+            alert("Please enter a valid email address.");
+            return;
+        }
+        alert("Email submitted successfully! Check your email for the link.");
+        });
+    </script>
+</html>
