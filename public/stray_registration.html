@@ -1,5 +1,5 @@
 <!-- 
- Authored by: Michael Angelo M. Daanoy
+ Authored by: Christian E. Del Rosario
  Back-end: Michael Angelo M. Daanoy
  Company: FurEver Homes Co.
  Project: FurDopt
@@ -8,119 +8,212 @@
  They must only provide their personal information to have the stray be registered in the website.
 -->
 
-<!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="utf-8" />
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>FurDopt | Register a Stray for Adoption</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="stray_regisration.css">
-</head>
 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FurDopt | Stray Registration</title>
+    <link rel="stylesheet" href="stray_registration.css">
+    <link rel="icon" href="https://i.ibb.co/4TgRvxp/Fur-Dopt-Logo-2.png" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    
+</head>
 <body>
     <header>
-        <div class="flex">
-            <img alt="Furdoft logo"
-                src="assets/logo.png"
-                width="50" height="50" />
-            <span>FURDOPT</span>
+        <div class="navlogo">
+            <a href="home_page.html"><img src="https://i.ibb.co/WPjhG6S/logo2.png" alt="logo2"></a>
         </div>
+
         <nav>
-            <a href="#">ABOUT US</a>
-            <a href="#">FAQs</a>
-            <a href="#">CONTACT US</a>
+            <ul class="nav__links">
+                <li><a href="#">ABOUT US</a></li>
+                <li><a href="#">FAQs</a></li>
+                <li><a href="contact_us_page.html">CONTACT US</a></li>
+                <li><a href="#"><span class="iconoir--profile-circle"></span> Hi, Gojo</a></li>
+            </ul>
         </nav>
-        <div class="flex">
-            <i class="fas fa-user-circle"></i>
-            <span style="margin-left: 0.5rem;">Hi, Gojo</span>
-        </div>
+
     </header>
 
-    <main>
-        <h1>Register a Stray for Adoption</h1>
-        <p>
-            Thank you for helping us find a loving home for a stray animal! Please fill out the form below with as much
-            detail as possible. This information will help us match the animal with a suitable adopter.
-        </p>
-        <form>
-            <section>
-                <h2>Contact Information</h2>
-                <div>
-                    <label for="name">Full Name</label>
-                    <input id="name" name="name" placeholder="Name" type="text" />
-                </div>
-                <div>
-                    <label for="phone">Phone</label>
-                    <input id="phone" name="phone" placeholder="Cellphone number" type="text" />
-                </div>
-                <div>
-                    <label for="email">Email</label>
-                    <input id="email" name="email" placeholder="Email address" type="email" />
-                </div>
-            </section>
+    <div class="Adoption_Application_Form">
+        <div class="left">
+            <img src="https://i.ibb.co/2y1BR9c/strayadap.png" alt="strayadap">
+        </div>
 
-            <section>
-                <h2>Questionnaire</h2>
+        <div class="right">
+            <h2>
+                Beluga
+            </h2>
+        </div>
+    </div>
+
+    <div class="Application_Form">
+        <div class="intro">
+            <h1>Adoption Application Form</h1>
+            <p>
+                Thank you so much for your interest in providing a forever home to an animal in need by adopting with FurDopt! Becoming a member of the FurDopt Adoptive Family is more than just bringing home a dog, cat, or any other animal, iit means joining a community of passionate, supportive, and knowledgeable individuals who are like PAWmily.
+            </p>
+        </div>
+
+        <div class="Applicants_Information">
+
+            <h1>Applicant’s Information</h1>
+
+            <div class="firsthalf">
                 <div>
-                    <label for="animal-type">What type of animal is it? Dog? Cat? Or Other?</label>
-                    <input id="animal-type" name="animal-type" placeholder="Input your answer." type="text" />
+                    <label for="Full_Name">Full Name</label>
+                    <input id="Full_Name" name="Full_Name" placeholder="Name" type="text" />
                 </div>
                 <div>
-                    <label>What is the animal's gender?</label>
-                    <div class="flex">
-                        <label class="space-x-4"><input name="gender" type="radio" value="male" /> Male</label>
-                        <label class="space-x-4"><input name="gender" type="radio" value="female" /> Female</label>
-                        <label class="space-x-4"><input name="gender" type="radio" value="unknown" /> Unknown</label>
+                    <label for="Full_Address_of_Current_Residence">Full Address of Current Residence</label>
+                    <input id="Full_Address_of_Current_Residence" name="Full_Address_of_Current_Residence" placeholder="Street Name, Street Number, City and Postal Code" type="text" />
+                </div>
+            </div>
+            <div class="Half">
+                <div class="Halfleft">
+
+                    <div class="leftquestions">
+                        <div>
+                            <label for="Phone">Phone</label>
+                            <input id="Phone" name="Phone" placeholder="Cellphone number" type="number" />
+                        </div>
+                        <div>
+                            <label for="Birth_date">Birth date</label>
+                            <input id="Birth_date" name="Birth_date" placeholder="Month / Day / Year" type="date" />
+                        </div>
+                        <div>
+                            <label for="Company_/_Business Name">Company / Business Name</label>
+                            <input id="Company_/_Business Name" name="Company_/_Business Name" placeholder="Please type N/A if unemployed" type="text" />
+                        </div>
+                    </div>
+
+                    <div class="Status">
+                        <label>Status</label>
+                        <br /> 
+                        <label class="space-x-4"><input name="Status" type="radio" value="Single" /> Single</label>
+                        <label class="space-x-4"><input name="Status" type="radio" value="Married" /> Married</label>
+                        <label class="space-x-4"><input name="Status" type="radio" value="Others" /> Others</label>
                     </div>
                 </div>
-                <div>
-                    <label for="found-location">Where was the animal found?</label>
-                    <input id="found-location" name="found-location" placeholder="Input your answer." type="text" />
-                </div>
-                <div>
-                    <label for="medical-conditions">Does the animal have any known medical conditions or needs?</label>
-                    <input id="medical-conditions" name="medical-conditions" placeholder="Input your answer."
-                        type="text" />
-                </div>
-                <div>
-                    <label for="other-info">Any other information we should know?</label>
-                    <input id="other-info" name="other-info" placeholder="Input your answer." type="text" />
-                </div>
-                <div>
-                    <label for="animal-photo">Please upload clear photos of the animal</label>
-                    <input id="animal-photo" name="animal-photo" type="file" />
-                </div>
-            </section>
+                <div class="Halfright">
 
-            <section>
-                <h2>Consent</h2>
-                <div>
-                    <label><input name="consent" type="checkbox" /> I consent to the use of this information for the
-                        purpose of finding an adoptive home for the animal</label>
+                    <div class="rightquestions">
+                        <div>
+                            <label for="Email">Email</label>
+                            <input id="Email" name="Email" placeholder="Email address" type="text" />
+                        </div>
+                        <div>
+                            <label for="Occupation">Occupation</label>
+                            <input id="Occupation" name="Occupation" placeholder="Your Work" type="text" />
+                        </div>
+                        <div>
+                            <label for="Social_Media_Profile">Social Media Profile</label>
+                            <input id="Social_Media_Profile" name="Social_Media_Profile" placeholder="Facebook / Twitter / Instagram Link" type="text" />
+                        </div>
+                    </div>
+
+                    <div class="Pronouns">
+                        <label>Pronouns</label>
+                        <br /> 
+                        <label class="space-x-4"><input name="Pronouns" type="radio" value="She / her" /> She / her</label>
+                        <label class="space-x-4"><input name="Pronouns" type="radio" value="He / him" /> He / him</label>
+                        <label class="space-x-4"><input name="Pronouns" type="radio" value="They / them" /> They / them</label>
+                    </div>
                 </div>
-                <div>
-                    <label><input name="contact" type="checkbox" /> I agree to be contacted if more information is
-                        needed.</label>
-                </div>
-            </section>
-            <div style="text-align: center;">
-                <button type="submit">SUBMIT</button>
             </div>
-        </form>
-    </main>
-
-    <footer>
-        <div class="footer-links">
-            <a href="#">Privacy Policy</a>
-            <a href="#"><i class="fab fa-facebook"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-linkedin"></i></a>
-            <a href="#"><i class="fab fa-tiktok"></i></a>
         </div>
-        <p>Copyright 2024 FurEver Homes Co.</p>
-    </footer>
-</body>
 
+        <div class="Questionnaire">
+            <h1>
+                Questionnaire
+            </h1>
+
+            <div class="questionQ">
+                <div>
+                    <label for="Q1">Who will be responsible for feeding, grooming, and generally caring for your pet?</label>
+                    <br />
+                    <input id="Q1" name="Q1" placeholder="Input your answer." type="text" />
+                </div>
+                <div>
+                    <label for="Q2">Who will be financially responsible for your pet’s needs (i.e. food, vet bills, etc.)?</label>
+                    <br />
+                    <input id="Q2" name="Q2" placeholder="Input your answer." type="text" />
+                </div>
+                <div>
+                    <label for="Q3">Who will look after your pet if you go on vacation or in case of emergency?</label>
+                    <br />
+                    <input id="Q3" name="Q3" placeholder="Input your answer." type="text" />
+                </div>
+                <div>
+                    <label for="Q4">How many hours in an average workday will your pet be left alone?</label>
+                    <br />
+                    <input id="Q4" name="Q4" placeholder="Input your answer." type="text" />
+                </div>
+                <div class="q5">
+                    <label for="Q5">What steps will you take to introduce your new pet to his/her new surroundings?</label>
+                    <br />
+                    <input id="Q5" name="Q5" placeholder="Input your answer." type="text" />
+                </div>
+                <div class="q6">
+                    <label for="Q6">Does everyone in the family support your decision to adopt a pet? Yes or No? Please explain.</label>
+                    <br />
+                    <input id="Q6" name="Q6" placeholder="Input your answer." type="text" />
+                </div>
+                <div>
+                    <label for="Q7">Do you have other pets? or Have you had pets in the past? What are they?</label>
+                    <br />
+                    <input id="Q7" name="Q7" placeholder="Input your answer." type="text" />
+                </div>
+            </div>    
+
+            <div class="Q8">
+                <label>Will you be able to visit the shelter for the interview and meet-and-greet? </label>
+                <br /> 
+                <label class="space-x-4"><input name="Q8" type="radio" value="Yes" /> Yes</label>
+                <label class="space-x-4"><input name="Q8" type="radio" value="No" /> No</label>
+                <br />
+                <p>
+                    (We will send the details to your email)
+                </p>
+            </div>
+
+            <div class="Submit">
+                <a href="#"><img src="https://i.ibb.co/tzRL7yD/submit.png" alt="submit"></a>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="copyright">
+        <img src="https://i.ibb.co/HzM1Scb/Slice-1.png" alt="Slice-1">
+        <div class="overlay-text">
+            <div class="left3">
+                <h2>
+                    Privacy Policy
+                </h2>
+            </div>
+
+            <div class="right3">
+                <h2>
+                    Copyright 2024 © FurEver Homes Co.
+                </h2>
+
+                <div class="social">
+                    <a href="#"><span class="mdi--instagram"></span></a>
+                    <a href="#"><span class="ic--baseline-facebook"></span></a>
+                    <a href=""><span class="prime--twitter"></span></a>
+                    <a href=""><span class="ri--linkedin-fill"></span></a>
+                    <a href=""><span class="ic--baseline-tiktok"></span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
 </html>
