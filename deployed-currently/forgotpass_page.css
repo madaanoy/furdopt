@@ -75,7 +75,7 @@ body
     width: 100%; 
     box-sizing: border-box; 
     /* for icon */
-    background: url('/images/mail.svg') no-repeat 10px center; 
+    background: url('mail.svg') no-repeat 10px center; 
     background-size: 26px 26px; 
 }
 
