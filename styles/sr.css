@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+body {
+   font-family: 'Inter', sans-serif;
+   background-color: #F8F4EC;
+   color: #333333;
+   margin: 0;
+   padding: 0;
+}
+.iconoir--profile-circle {
+    display: inline-block;
+    width: 30px;
+    height: 36px;
+    --svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cg fill='none' stroke='%23000' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5'%3E%3Cpath d='M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10s10-4.477 10-10S17.523 2 12 2'/%3E%3Cpath d='M4.271 18.346S6.5 15.5 12 15.5s7.73 2.846 7.73 2.846M12 12a3 3 0 1 0 0-6a3 3 0 0 0 0 6'/%3E%3C/g%3E%3C/svg%3E");
+    background-color: currentColor;
+    -webkit-mask-image: var(--svg);
+    mask-image: var(--svg);
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%;
+}
+
+    /**Got this in icon-sets.iconify.design
+    .
+    .
+    .
+    .
+    .
+    **/
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: #FFFAF0;
+}
+.navlogo{
+    background-color: #E5D3B3;
+}
+.navlogo a{
+    background-color: #E5D3B3;
+}
+.nav__links{
+    background-color: #E5D3B3;
+}
+.navlogo img{
+    height: 76px;
+    width: auto;
+    background-color: #E5D3B3;
+}
+.nav__links img{
+    background-color: #E5D3B3;
+    height: 26px;
+}
+.nav__links li a{
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    color: #1E1E1E;
+    font-size: 22;
+    text-decoration: none;
+    background-color: #E5D3B3;
+}
+.nav__links img li a{
+    background-color: #E5D3B3;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 16px;
+    background-color: #E5D3B3;
+}
+.nav__links li {
+    display: inline-block;
+    padding: 0px 20px;
+    background-color: #E5D3B3;
+    
+}
+.iconoir--profile-circle{
+    vertical-align: -11px;
+    margin-right: 5px;
+}
+
+/** Content **/
+
+
+h1 {
+   font-size: 45px;
+   font-weight: bold;
+   text-align: center;
+   margin-bottom: 1rem;
+   margin-top: 3rem
+}
+
+p {
+   text-align: center;
+   margin-bottom: 2rem;
+   font-size: 18px;
+}
+
+.contact_information
+{
+    width: 100%;
+    text-align: left;
+    align-items: center;
+    justify-content: center;
+    font-family: "Inter", sans-serif;
+    padding: 15px 10px; 
+}
+
+.questionnaire
+{
+    width: 100%;
+    text-align: left;
+    align-items: center;
+    justify-content: center;
+    font-family: "Inter", sans-serif;
+    padding: 15px 10px; 
+}
+
+.consent
+{
+    width: 100%;
+    text-align: left;
+    align-items: center;
+    justify-content: center;
+    font-family: "Inter", sans-serif;
+    padding: 15px 10px; 
+}
+
+form {
+   display: flex;
+   flex-direction: column;
+   width: 100%;
+    text-align: left;
+    justify-content: center;
+    font-family: "Inter", sans-serif;
+    padding: 15px 10px; 
+
+}
+
+section {
+   margin-bottom: 2rem;
+}
+
+h2 {
+   font-size: 1.5rem;
+   font-weight: bold;
+   margin-bottom: 1rem;
+}
+
+label {
+   display: block;
+   margin-bottom: 0.5rem;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="file"] {
+   width: 100%;
+   padding: 0.5rem;
+   border: 1px solid #ccc;
+   border-radius: 0.5rem;
+   box-sizing: border-box;
+}
+
+input[type="radio"] {
+   margin-right: 0.5rem;
+}
+
+.flex {
+   display: flex;
+   align-items: center;
+}
+
+.space-x-4 {
+   margin-right: 1rem;
+}
+
+.space-x-6 {
+   margin-right: 1.5rem;
+}
+
+.submit
+{
+    text-align: center;
+    display: flex;
+    margin-top: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+button {
+   background-color: #D9C2A2;
+   color: #333333;
+   padding: 0.5rem 1rem;
+   border: none;
+   border-radius: 0.5rem;
+   cursor: pointer;
+}
+ 
+
+ 
+/** Footer **/
+
+.copyright{
+    position: absolute;
+    display: flex;
+    background-color: #74665b;
+    width: 100%;
+}
+.copyright img{
+    height: auto;
+    width: auto;
+}
+.overlay-text{
+    background-color: #74665B;
+    font-family: "Inter", sans-serif;
+}
+.left3{
+    position: absolute;
+    top: 35%; 
+    left: 5%;
+    padding: 10px 20px; 
+    text-align: center;
+    background-color: #74665B;
+}
+.left3 h2{
+    background-color: #74665B;
+    color: white;
+}
+.right3{
+    position: absolute;
+    top: 35%;
+    right: 5%; 
+    padding: 10px 20px; 
+    text-align: center;
+    background-color: #74665B;
+}
+.right3 h2{
+    background-color: #74665B;
+    color: white;
+}
+.social{
+    background-color: #74665B;
+}
+.social a{
+    background-color: #74665B;
+    color: white;
+    margin-right: 15px;
+}
+
