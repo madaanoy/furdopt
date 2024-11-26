@@ -162,7 +162,7 @@ header
 .leftmidright{
     background-color: #E5D3B3;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around; /** edit ko lang pi to space-around - Rona **/ 
     align-items: center;
     
 }
@@ -209,11 +209,13 @@ header
     align-items: center;
     justify-content: space-around;
 }
+/** adjust size pi - Rona **/ 
 .left2{
-    margin-bottom: 100px;
+    margin-bottom: 160px;
+    margin-top: 70px;
 }
 .right2 img{
-    margin-top: 100px;
+    margin-top: 200px;
 }
 .right2{
     text-decoration: none;
