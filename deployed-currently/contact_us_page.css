@@ -276,9 +276,10 @@ header
 }
 .left2{
     margin-bottom: 100px;
+    margin-top: 100px; /* added this -Rona */
 }
 .right2 img{
-    margin-top: 100px;
+    margin-top: 200px; /* adjust -Rona */
 }
 .right2{
     text-decoration: none;
