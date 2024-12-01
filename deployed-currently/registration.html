@@ -67,67 +67,45 @@
 <!-- SCRIPTS -->
 <script type="module">
     import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
-    import { getFirestore, setDoc, doc, addDoc } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
-    import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-analytics.js";
     import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
+    import { getFirestore, doc, setDoc } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
 
-const firebaseConfig = {
-  apiKey: "AIzaSyCu77kpZVFx8k2ObWUafL9wvxGQZg0_J1E",
-  authDomain: "furdopt-2.firebaseapp.com",
-  projectId: "furdopt-2",
-  storageBucket: "furdopt-2.firebasestorage.app",
-  messagingSenderId: "985552611472",
-  appId: "1:985552611472:web:18231c5a223dd266f55015",
-  measurementId: "G-9WE8VTT98Y"
-};
-    document.getElementById("submit_button").addEventListener("click", function () {
-        console.log("User has registered");
-    })
-
-    const checkbox = document.getElementById("privacyPolicy");
-    const submitButton = document.getElementById("submit_button");
-    const errorDiv = document.getElementById("checkboxError");
-
-    submitButton.addEventListener("click", function (event) {
-        if (!checkbox.checked) {
-            event.preventDefault(); // Prevent form submission
-            errorDiv.innerText = "You must agree to the Privacy Policy.";
-        } else {
-            errorDiv.innerText = ""; // Clear any previous error message
-            console.log("User has registered");
-        }
-    });
+    const firebaseConfig = {
+        apiKey: "AIzaSyCu77kpZVFx8k2ObWUafL9wvxGQZg0_J1E",
+        authDomain: "furdopt-2.firebaseapp.com",
+        projectId: "furdopt-2",
+        storageBucket: "furdopt-2.firebasestorage.app",
+        messagingSenderId: "985552611472",
+        appId: "1:985552611472:web:18231c5a223dd266f55015",
+        measurementId: "G-9WE8VTT98Y"
+    };
 
     const app = initializeApp(firebaseConfig);
-    const analytics = getAnalytics(app);
-    const db = getFirestore(app);
     const auth = getAuth();
+    const db = getFirestore(app);
 
     document.getElementById("registerForm").addEventListener("submit", async (e) => {
         e.preventDefault();
-
-        const userEmail = document.getElementById('email_address').value;
-        const userName = document.getElementById('user_name').value;
-        const userPass = document.getElementById('user_password').value;
+        const username = document.getElementById("user_name").value;
+        const email = document.getElementById("email_address").value;
+        const password = document.getElementById("user_password").value;
 
         try {
-            const docRef = doc(db, "accounts", userName);
-            const userCredential = await createUserWithEmailAndPassword(auth, userEmail, userPass);
+            // Create the user with email and password
+            const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+            const user = userCredential.user;
 
-            await setDoc(docRef, {
-                userEmail: userEmail,
-                userName: userName,
-                userPass: userPass,
+            // Store the username in Firestore
+            const userRef = doc(db, "accounts", email); // Use user UID as document ID
+            await setDoc(userRef, {
+                username: username,
+                email: email,
+                password: password
             });
 
-            console.log("Form submitted successfully:", userEmail);
-            alert("You have successfully registered!");
-            // Redirect to another page
-            window.location.assign("index.html");
-
+            window.location.href = "index.html";  // Redirect to login page after successful registration
         } catch (error) {
-            console.error("Error submitting form:", error);
-            alert("There was an error with your submission: " + error.message);
+            alert(error.message);
         }
     });
 </script>
