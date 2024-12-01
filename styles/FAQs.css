@@ -1,3 +1,10 @@
+/** 
+ Authored by: Rose Ann L. Solero
+ Company: FurEver Homes Co.
+ Project: FurDopt
+ Feature: [FDT-010] FAQs
+ Description: This screen will answers the frequently asked questions of the user.
+ **/
 *{
     margin: 0;
     padding: 0;
@@ -108,7 +115,7 @@ header{
      margin-left: auto;
      margin-right: auto;
     width: 50%;
-    margin-bottom: 250px;
+    margin-bottom: 150px;
 }
 
 .questions
@@ -123,17 +130,20 @@ header{
      width: 60%;
      border-radius: 8px;    
      color: #000000;
-     font-size: 30;
-     font-family: "Inter", sans-serif;
+     font-size: 18px;
+     font-family: Inter;
      margin: auto;
      position:relative;
      display: flex;
      flex-direction: column;
      align-items: center;
-     justify-content: space-between;
-     margin-bottom: 30px;
+     margin-bottom: 20px;
 
 }
+
+.active, .collapsible:hover {
+    background-color: #c8ad7f;
+  }
 
 .content
 {
@@ -144,25 +154,10 @@ header{
     width: 60%;
     padding: 10px;
     margin-bottom: 50px;
+    display:none;
 }
 
-.collapsible1 
-{
-     background-color: #E5D3B3; 
-     padding: 10px;
-     width: 60%;
-     border-radius: 8px;    
-     color: #000000;
-     font-size: 30;
-     font-family: "Inter", sans-serif;
-     margin: auto;
-     position:relative;
-     display: flex;
-     flex-direction: column;
-     align-items: center;
-     justify-content: space-between;
-     margin-bottom: 30px;
-}
+
 
 /** The Footer **/
 .mdi--instagram {
